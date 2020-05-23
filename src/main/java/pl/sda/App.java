@@ -1,6 +1,5 @@
 package pl.sda;
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class App {
