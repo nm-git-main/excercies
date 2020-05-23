@@ -3,3 +3,4 @@
 /.idea/
 .gitignore
 pom.xml
+/src/test/
