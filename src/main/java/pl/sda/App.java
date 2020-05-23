@@ -1,5 +1,6 @@
 package pl.sda;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class App {
@@ -9,13 +10,14 @@ public class App {
         String[] splittedLine = scanner.nextLine()
                 .trim()
                 .replaceAll(" ","")
-                .split(",",3);
+                .split(",");
 
         double[] abc = new double[splittedLine.length];
 
         for(int i = 0; i < splittedLine.length; i++){
             abc[i] = Double.parseDouble(splittedLine[i]);
         }
+
         try {
             RootsOfSquareEquation pierwiastki = calculateRootsOfSquareEquation(abc[0], abc[1], abc[2]);
             if(pierwiastki.getX1()==pierwiastki.getX2()){
@@ -26,6 +28,8 @@ public class App {
 
         } catch(NegativeDeltaException e){
             System.out.println("Parametry a: " + abc[0] + ", b: " + abc[1] + ", c: " + abc[2] + " spowodowały ujemną deltę.");
+        } catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Za mało argumentów.");
         }
     }
 
