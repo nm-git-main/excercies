@@ -1,7 +1,7 @@
 package pl.sda;
 
 import java.util.Scanner;
-//test
+//test2
 public class App {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
