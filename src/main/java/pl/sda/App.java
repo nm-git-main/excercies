@@ -11,7 +11,7 @@ public class App {
 
         try {
             abc = cleanAndConvertToDoubleArray(line);
-
+            RootsOfSquareEquation pier2 = new RootsOfSquareEquation(1.234,1232.3);
             RootsOfSquareEquation pierwiastki = RootsCalculator.calculateRootsOfSquareEquation(abc[0], abc[1], abc[2]);
             if(pierwiastki.getX1()==pierwiastki.getX2()){
                 System.out.println("Jeden pierwiastek x = " + pierwiastki.getX1());
